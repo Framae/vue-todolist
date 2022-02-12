@@ -35,7 +35,12 @@ const app = new Vue (
                     text: 'vedere serie Netflix',   
                     done: true,
                 }
-            ]
+            ],
+        },
+        methods: {
+            addToDo() {
+                this.toDos.push(this.newToDo);
+            }
         }
     }
 )

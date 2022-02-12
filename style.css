@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 
-.add-toDo {
-    width: 80%;
+.container {
+    max-width: 800px;
     margin: auto;
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
+}
+
+.add-toDo {
+    text-align: center;
 }
 
 input {
@@ -20,4 +22,26 @@ input {
 
 button {
     padding: 3px;
+}
+
+.lista {
+    margin: 30px 0;
+}
+
+.lista ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+.lista ul {
+    background-color: aqua;
+    padding: 15px;
+}
+
+.lista ul li i {
+    float: right;
+}
+
+.lista ul li:hover {
+    background-color: lightblue;
 }
