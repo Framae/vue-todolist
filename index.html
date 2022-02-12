@@ -16,7 +16,18 @@
         </header>
 
         <main>
-            
+            <div class="add-toDo">
+                <h3>Aggiungi</h3>
+                <input type="text" v-model="newToDo" placeholder="New To do">
+                <button>Aggiungi</button>
+            </div>
+            <div>
+                <ul>
+                    <li v-for="toDo in toDos">
+                        {{toDo}}
+                    </li>
+                </ul>
+            </div>
         </main>
 
     </div>
