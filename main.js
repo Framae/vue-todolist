@@ -51,7 +51,7 @@ const app = new Vue (
                         done: false
                     };
                     this.toDos.push(newToDoObj);
-                    this.newToDo = ""; //questo mi resetta il campo dopo il click
+                    this.newToDo = ''; //questo mi resetta il campo dopo il click
                 }
                 
             },
@@ -60,7 +60,7 @@ const app = new Vue (
             }
 
             
-            }
+            
         }
     }
 )

@@ -14,7 +14,7 @@
 
         <main>
             <div class="add-toDo">
-                <h3>Aggiungi</h3>
+                <h3>Aggiungi cose da fare</h3>
                 <input @keyup.enter="addToDo" type="text" v-model="newToDo" placeholder="New To do">
                 <button @click="addToDo">Aggiungi</button>
             </div>
@@ -25,6 +25,9 @@
                         <i @click="removeToDo(indice)" class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>
+                <div v-else>
+                    Non ci sono elementi
+                </div>
             </div>
         </main>
 
