@@ -16,7 +16,7 @@
             <div class="add-toDo">
                 <h3>Aggiungi</h3>
                 <input @keyup.enter="addToDo" type="text" v-model="newToDo" placeholder="New To do">
-                <button @click="addToDo" @click.stop="stop">Aggiungi</button>
+                <button @click="addToDo">Aggiungi</button>
             </div>
             <div class="lista">
                 <ul v-if="toDos.length > 0">

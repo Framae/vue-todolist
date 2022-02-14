@@ -37,6 +37,11 @@ const app = new Vue (
                 }
             ],
         },
+
+        mounted() {
+            this.$nextTick(() => this.$refs.testInput.focus())
+        },
+
         methods: {
             addToDo() {
                 if (this.newToDo.trim().length > 0) {
@@ -48,14 +53,13 @@ const app = new Vue (
                     this.toDos.push(newToDoObj);
                     this.newToDo = ""; //questo mi resetta il campo dopo il click
                 }
-                removeToDo(index) {
-                    this.toDos.splice(index, 1)
-                }
+                
             },
-            stop() {
-                if (this.newToDo == '') {
+            removeToDo(index) {
+                this.toDos.splice(index, 1)
+            }
 
-                }
+            
             }
         }
     }
