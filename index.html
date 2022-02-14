@@ -15,14 +15,14 @@
         <main>
             <div class="add-toDo">
                 <h3>Aggiungi</h3>
-                <input type="text" v-model="newToDo" placeholder="New To do">
-                <button @click="addToDo">Aggiungi</button>
+                <input @keyup.enter="addToDo" type="text" v-model="newToDo" placeholder="New To do">
+                <button @click="addToDo" @click.stop="stop">Aggiungi</button>
             </div>
             <div class="lista">
-                <ul>
-                    <li v-for="toDo in toDos">
-                        {{toDo}}
-                        <i class="fa-solid fa-xmark"></i>
+                <ul v-if="toDos.length > 0">
+                    <li v-for="(toDo, indice) in toDos" @click="lineThrough(indice)" :class="{'done': todo.done}">
+                        {{toDo.text}}
+                        <i @click="removeToDo(indice)" class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>
             </div>

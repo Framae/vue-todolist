@@ -23,23 +23,39 @@ const app = new Vue (
             toDos: [
                 {
                     text: 'eseguire la consegna',   
-                    done: true,
+                    done: false,
                 },
 
                 {
                     text: 'fare la spesa',   
-                    done: true,
+                    done: false,
                 },
 
                 {
                     text: 'vedere serie Netflix',   
-                    done: true,
+                    done: false,
                 }
             ],
         },
         methods: {
             addToDo() {
-                this.toDos.push(this.newToDo);
+                if (this.newToDo.trim().length > 0) {
+
+                    const newToDoObj = {
+                        text: this.newToDo.trim(),
+                        done: false
+                    };
+                    this.toDos.push(newToDoObj);
+                    this.newToDo = ""; //questo mi resetta il campo dopo il click
+                }
+                removeToDo(index) {
+                    this.toDos.splice(index, 1)
+                }
+            },
+            stop() {
+                if (this.newToDo == '') {
+
+                }
             }
         }
     }
