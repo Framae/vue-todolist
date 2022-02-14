@@ -20,8 +20,8 @@
             </div>
             <div class="lista">
                 <ul v-if="toDos.length > 0">
-                    <li v-for="(toDo, indice) in toDos" @click="lineThrough(indice)" :class="{'done': todo.done}">
-                        {{toDo.text}}
+                    <li v-for="(toDo, indice) in toDos" :class="{'done': toDo.done}">
+                        <span @click="lineThrough(indice)">{{toDo.text}}</span>
                         <i @click="removeToDo(indice)" class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>
