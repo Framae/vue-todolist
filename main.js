@@ -58,8 +58,8 @@ const app = new Vue (
             removeToDo(index) {
                 this.toDos.splice(index, 1)
             },
-            lineThrough() {
-                this.toDos.text[index]
+            lineThrough(index) {
+                this.toDos[index].done = !this.toDos[index].done;
             }
             
             
